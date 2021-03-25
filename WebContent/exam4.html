@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h3>아래에 텍스트 반복 출력하시오</h3>
+	<p></p>
+
+<script src="js/jquery-3.6.0.min.js"></script> <!-- 사용하지 않으면 주석을 막을 것 -->
+<script>
+	// <p>태그 안에 HELLO TEXT 5번 반복 출력
+	$(document).ready(function(){
+		var str="";  // 값을 안 넣으면 타입을 알수 없음
+		// 초기값을 넣어주어야 함
+		// ** 지역변수는 반드시 초기화를 해야 함 **
+		for(i=0; i<5; i++) {
+			str += "Hello Text ";
+		}
+		$("p").text(str);
+		// text() : 기존에 값을 무시하고 새로운 데이터 변경
+	});
+</script>
+</body>
+</html>

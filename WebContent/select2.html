@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<style type="text/css"></style>
+</head>
+<body>
+
+<h3>아이디 선택자</h3>
+<p id="num0" class="even">아이디값으로 태그를 선택하기</p>
+<p id="num1" class="odd select1">아이디값으로 태그를 선택하기</p>
+<p id="num2" class="even">아이디값으로 태그를 선택하기</p>
+<p id="num3" class="odd select2">아이디값으로 태그를 선택하기</p>
+<p id="num4" class="even">아이디값으로 태그를 선택하기</p>
+
+<script src="js/jquery-3.6.0.min.js"></script> <!-- jq를 연동 -->
+<script>
+	$("#num3").css("font-weight","bold");
+	//1번에 이태릭체 강조를 넣으시오
+	$("#num1").css("font-style","italic");
+	
+	$("p.even").css("background-color","#cccccc");
+	// odd에 배경색을 하늘색
+	$(".odd").css("background-color", "lightskyblue");
+	// 선택된 영역만 빨간색
+	$(".select2").css("background-color", "#ff0000");
+	$(".odd.select1").css("background-color", "#0000ff");
+	// 참고적으로 기억을 바랍니다
+	// 그림그리기와 비슷 - 디자인 덮인다
+	
+</script>
+</body>
+</html>
