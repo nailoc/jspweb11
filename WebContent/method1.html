@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<style type="text/css">
+	.even { background-color: lightblue;}
+	.highlight { background-color: pink;}
+</style>
+</head>
+<body>
+
+<h3>제이쿼리의 클래스명을 추가 또는 제거예제</h3>
+<p class="even">DO-LIST-1</p>
+<p class="odd">DO-LIST-2</p>
+<p class="even">DO-LIST-3</p>
+<p class="odd">DO-LIST-4</p>
+<p class="even">DO-LIST-5</p>
+
+<script src="js/jquery-3.6.0.min.js"></script> <!-- jq를 연동 -->
+<script>
+	$(document).ready(function(){
+		$("p").mouseover(function(){
+			$(this).addClass("highlight");
+			// 클래스를 추가 -> 적용 css 가 반영 
+			// 변경되는 css() 가 많을 때
+		});
+		
+		$("p").mouseout(function(){
+			$(this).removeClass("highlight");
+			// 클래스를 제거 -> 적용 css 가 제거
+		});
+	});
+</script>
+</body>
+</html>

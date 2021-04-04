@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<style type="text/css">
+	.bgyellow {
+		background-color: yellow;
+	}
+	.bgblue {
+		background-color: lightblue;
+	}	
+</style>
+</head>
+<body>
+
+<h3>클래스명 추가하기</h3>
+
+<p>헬로우 제이쿼리 1(배경색변경)</p>
+<p>헬로우 제이쿼리 2(배경색변경)</p>
+<p>헬로우 제이쿼리 3(배경색변경)</p>
+<p>헬로우 제이쿼리 4(배경색변경)</p>
+<p>헬로우 제이쿼리 5(배경색변경)</p>
+
+<div>
+	<input type="button" value="파란색" id="btn1"> &nbsp;
+	<input type="button" value="노락색" id="btn2">
+</div>
+
+<script src="js/jquery-3.6.0.min.js"></script> <!-- jq를 연동 -->
+<script>
+	$(document).ready(function(){ // 초기에 정의할 코드
+		$("input#btn1").click(function(){
+			$("p").each(function(){
+				$(this).addClass("bgblue");
+			});
+		});
+	
+		$("input#btn2").click(function(){
+			
+		});
+	});  
+
+</script>
+</body>
+</html>

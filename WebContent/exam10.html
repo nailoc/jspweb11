@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<style type="text/css">
+	.odd {
+		background-color: violet;
+	}
+</style>
+</head>
+<body>
+
+<h3>홀수 번째 p태그를 보라색을 변경</h3>
+
+<p>0</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+
+<script src="js/jquery-3.6.0.min.js"></script> <!-- jq를 연동 -->
+<script>
+	$("p").each(function(index, item){ // h3 -> p
+
+		if(index%2==0) {  // 반대로 됨 -> 인덱스 0부터 시작됨
+			$(item).addClass("odd");
+		}
+		
+	});
+</script>
+</body>
+</html>

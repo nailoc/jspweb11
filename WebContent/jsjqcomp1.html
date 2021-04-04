@@ -36,27 +36,24 @@
 	<option>기타</option>
 </select>&nbsp;<input type="button" class="cloth" value="의류선택"></p></p>
 
+<h3>5.태그안에 html문장을 넣기</h3>
+<p id="jshtml">자바스크립트</p>
+<p id="jqhtml">제이쿼리</p>
 <script src="js/jquery-3.6.0.min.js"></script> <!-- jq를 연동 -->
 <script>
 	//1.스타일 속성을 변경에 대한 비교
 	document.getElementById("js").style.color = "green";
 	$("#jq").css("color", "blue");	
+	
 	//2.폼컨트롤 값 변경에 대한 비교
 	document.getElementById("jsv").value = "아이디";
 	$("#jqv").val("1234");
+	
 	//3.속성값에 변경대한 비교
 	document.getElementById("jsi").src = "images/tiger.gif";
 	$("#jqi").attr("src","images/bird.gif");
 	
 	//4.폼컨트롤-특별케이스
-	$(document).ready(function(){
-		$("input.cloth").click(function(){
-			
-			var sel = $("select#jqs>option:selected").val();
-			
-			alert(sel);
-		});
-	});
 	function selecMenu() {
 		var selbox = document.getElementById("jss");
 		// option 배열로 여러개 존재
@@ -67,6 +64,25 @@
 			}
 		}
 	}
+	
+	$(document).ready(function(){
+		
+		$("input.cloth").click(function(){
+			
+			var sel = $("select#jqs>option:selected").val();
+			
+			alert(sel);
+		});
+		
+	});
+	
+	//5. 태그안에 html 넣기
+	document.getElementById("jshtml").innerHTML = "<b><i>자바스크립트</i></b>";
+	$("#jqhtml").html("<a href='http://www.jquery.com'>제이쿼리</a>");
+	// 참고로 text 넣기는
+	// 자바스크립트 innerText <==> 제이쿼리  text();
+	
+	
 </script>
 </body>
 </html>

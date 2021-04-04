@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<style type="text/css"></style>
+</head>
+<body>
+
+<h3>상위메뉴를 선택후 하위메뉴를 변경</h3>
+
+1DEPTH : <select id="mainCate" onchange="selectMain();">
+	<option value="0" selected="selected">전체</option>
+	<option value="1">스포츠</option>
+	<option value="2">공연</option>
+</select>
+
+2DEPTH : <select id="subCate">
+	<option value="">전체</option>
+</select>
+
+<script src="js/jquery-3.6.0.min.js"></script> <!-- jq를 연동 -->
+<script>
+	function selectMain() {
+		
+		mainVal = $("select#mainCate > option:selected").val();		
+		initdat = "<option value=''>전체</option>";
+		switch(mainVal) { 
+		case "1": // 스포츠
+			curdata = initdat;
+			curdata += "<option value='bb'>야구</option>";
+			curdata += "<option value='fb'>축구</option>";
+			$("select#subCate").html(curdata);
+			break;
+		case "2": // 공연
+			//alert(mainVal);
+			curdata = initdat; // 새로 대입
+			curdata += "<option value='th'>연극</option>"; // 추가 대입
+			curdata += "<option value='ms'>뮤지컬</option>";
+			$("select#subCate").html(curdata);
+			break
+		default: 
+			break;
+		}
+			
+		
+	}
+</script>
+</body>
+</html> 
